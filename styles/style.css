@@ -34,6 +34,10 @@ figure {
   font-family: var(--main-font, sans-serif);
 }
 
+.header {
+  padding-top: 10vi;
+}
+
 .heading {
   font-family: var(--accent-font, serif);
   font-weight: 600;
@@ -44,4 +48,25 @@ figure {
 
 .content-section {
   padding: 0 5vi;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  padding-bottom: 40px;
+}
+
+.content__title {
+  padding: 7vi 0 2.5vi;
+}
+
+.content__text-block {
+  font-size: 18px;
+}
+
+.content__text-block .content__paragraph:not(:last-child) {
+  padding-bottom: 1.5em;
+}
+
+.content__link {
+  color: inherit;
 }
