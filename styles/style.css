@@ -112,3 +112,20 @@ figure {
   background-size: 100%;
   inset: calc(15px / 4) 0 0 -30px;
 }
+
+.content__figure {
+  margin: 7% 0;
+  width: calc(100% + 10vi);
+  position: relative;
+  left: -5vi;
+}
+
+.content__picture {
+  width: 100%;
+}
+
+.content__picture-caption {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--text-color);
+}

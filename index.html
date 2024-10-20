@@ -44,6 +44,44 @@
           жанра эмбиент Брайан Ино и мультимедиа-художник Питер Шмидт.
         </p>
       </div>
+      <figure class="content__figure">
+        <picture>
+          <source
+            srcset="
+              ./images/cards-1x.avif 1x,
+              ./images/cards-2x.avif 2x,
+              ./images/cards-2x.avif 3x
+            "
+            type="image/avif"
+          />
+          <source
+            srcset="
+              ./images/cards-1x.webp 1x,
+              ./images/cards-2x.webp 2x,
+              ./images/cards-2x.webp 3x
+            "
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/cards-1x.png 1x,
+              ./images/cards-2x.png 2x,
+              ./images/cards-2x.png 3x
+            "
+            type="image/png"
+          />
+          <img
+            class="content__picture"
+            loading="lazy"
+            srcset="./images/cards-1x.png 1x, ./images/cards-2x.png 2x ./images/cards-2x.png 3x"
+            src="./images/cards-1x.png"
+            alt="Стол крупным планом, на столе телефон, ежедневник, ручка, визитка."
+          />
+        </picture>
+        <figcaption class="content__picture-caption">
+          Колода Oblique Strategies
+        </figcaption>
+      </figure>
       <div class="content__text-block">
         <p class="content__paragraph">
           Oblique Strategies в основном используют музыканты, но колода подходит
