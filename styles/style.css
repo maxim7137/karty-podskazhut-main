@@ -32,6 +32,7 @@ figure {
 
 .page {
   font-family: var(--main-font, sans-serif);
+  color: var(--text-color);
 }
 
 .header {
@@ -128,4 +129,43 @@ figure {
   text-align: center;
   padding: 20px 0;
   border-bottom: 1px solid var(--text-color);
+}
+
+.content__card {
+  margin: 7% 0;
+  border: 1px solid var(--text-color);
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__card-title {
+  font-size: 60px;
+}
+
+.content__card-subtitle {
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.colored-text {
+  display: inline-block;
+  position: relative;
+}
+
+.colored-text::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -0.08em;
+  bottom: 0.12em;
+  width: 105%;
+  height: 0.28em;
+  background-color: var(--accent-color);
+  display: block;
 }
