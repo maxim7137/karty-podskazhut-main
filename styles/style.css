@@ -63,10 +63,52 @@ figure {
   font-size: 18px;
 }
 
+.content__text-block_type_first-lettered
+  .content__paragraph:first-child:first-letter {
+  background-color: var(--accent-color);
+  font-size: 30px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0 4px;
+  margin-right: 1px;
+}
+
 .content__text-block .content__paragraph:not(:last-child) {
   padding-bottom: 1.5em;
 }
 
 .content__link {
   color: inherit;
+}
+
+.content__blockquote {
+  padding-bottom: 1.5em;
+  width: 75%;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+.content__list {
+  list-style: none;
+  padding-inline-start: 40px;
+}
+
+.content__list-item {
+  position: relative;
+}
+
+.content__list-item:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+.content__list-item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url(../images/marker-light.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  inset: calc(15px / 4) 0 0 -30px;
 }
