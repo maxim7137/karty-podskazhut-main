@@ -30,6 +30,12 @@ figure {
   --accent-font: "STIX Two Text", "Times New Roman", Times, serif;
 }
 
+.theme_dark {
+  --bg-color: #171717;
+  --text-color: #b3b3b3;
+  --accent-color: transparent;
+}
+
 a:focus-visible,
 button:focus-visible {
   outline: 1px solid currentColor;
@@ -38,6 +44,13 @@ button:focus-visible {
 .page {
   font-family: var(--main-font, sans-serif);
   color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+@media (max-width: 380px) {
+  .page {
+    overflow-x: hidden;
+  }
 }
 
 .header {
@@ -116,6 +129,11 @@ button:focus-visible {
   display: block;
 }
 
+/* темная кнопка */
+.theme_dark .header__theme-button_is-active::after {
+  background-image: url(../images/pattern.svg);
+}
+
 .content__title {
   padding: 7vi 0 2.5vi;
 }
@@ -124,6 +142,7 @@ button:focus-visible {
   font-size: 18px;
 }
 
+/* Буквица */
 .content__text-block_type_first-lettered
   .content__paragraph:first-child:first-letter {
   background-color: var(--accent-color);
@@ -132,6 +151,12 @@ button:focus-visible {
   display: inline-block;
   padding: 0 4px;
   margin-right: 1px;
+}
+
+.theme_dark
+  .content__text-block_type_first-lettered
+  .content__paragraph:first-child:first-letter {
+  border: 1px solid var(--text-color);
 }
 
 .content__text-block .content__paragraph:not(:last-child) {
@@ -174,6 +199,10 @@ button:focus-visible {
   inset: calc(15px / 4) 0 0 -30px;
 }
 
+.theme_dark .content__list-item::before {
+  background-image: url(../images/marker-dark.svg);
+}
+
 .content__figure {
   margin: 7% 0;
   width: calc(100% + 10vi);
@@ -183,6 +212,7 @@ button:focus-visible {
 
 .content__picture {
   width: 100%;
+  overflow: hidden;
 }
 
 .content__picture-caption {
@@ -213,6 +243,7 @@ button:focus-visible {
   line-height: 21px;
 }
 
+/* подчеркнутый текст */
 .colored-text {
   display: inline-block;
   position: relative;
@@ -228,4 +259,22 @@ button:focus-visible {
   height: 0.28em;
   background-color: var(--accent-color);
   display: block;
+}
+
+.theme_dark .colored-text::after {
+  background-image: url(../images/pattern.svg);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vi;
+  border-top: 1px solid currentColor;
+}
+
+.footer__copyright {
+  font-size: 18px;
+  color: currentColor;
+  padding: 2.5vi;
 }
