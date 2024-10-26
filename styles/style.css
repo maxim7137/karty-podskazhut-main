@@ -56,6 +56,57 @@ figure {
   padding-bottom: 40px;
 }
 
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header__theme-toggler {
+  display: flex;
+  gap: 0 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  list-style: none;
+  font-size: 18px;
+}
+
+.header__theme-button {
+  font: inherit;
+  color: currentColor;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.header__theme-button:not(.header__theme-button_is-active):hover {
+  text-decoration: underline;
+}
+
+.header__theme-button_is-active {
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+}
+
+.header__theme-button_is-active::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -0.2em;
+  bottom: 0.12em;
+  width: 110%;
+  height: 0.35em;
+  background-color: var(--accent-color);
+  display: block;
+}
+
 .content__title {
   padding: 7vi 0 2.5vi;
 }
