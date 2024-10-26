@@ -30,6 +30,11 @@ figure {
   --accent-font: "STIX Two Text", "Times New Roman", Times, serif;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid currentColor;
+}
+
 .page {
   font-family: var(--main-font, sans-serif);
   color: var(--text-color);
@@ -83,6 +88,10 @@ figure {
   padding: 0;
   background: none;
   border: none;
+}
+
+.header__theme-button:disabled {
+  pointer-events: none;
 }
 
 .header__theme-button:not(.header__theme-button_is-active):hover {
